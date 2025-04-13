@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Optimización móvil -->
+  <!-- Optimización para móviles -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Farmacia Charallave C.A - Inicio</title>
   <!-- Bootstrap CSS -->
@@ -16,9 +16,16 @@
       font-family: Arial, sans-serif;
       background: #f8f9fa;
     }
-    /* Navbar: Logo */
+    /* Navbar: Logo y otros íconos */
     .navbar-brand img {
       height: 50px;
+    }
+    .nav-instagram {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    .nav-instagram:hover {
+      color: #E1306C;
     }
     /* Carousel: imagen de portada */
     .carousel-item img {
@@ -61,7 +68,6 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Navegación principal">
     <div class="container">
       <a class="navbar-brand" href="#inicio">
-        <!-- Puedes reemplazar "assets/logo.png" por la ruta de tu logo -->
         <img src="assets/logo.png" alt="Logo Farmacia Charallave C.A">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -77,6 +83,12 @@
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="#sucursales">Sucursales</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <!-- Ícono de Instagram -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/farmaciacharallave/" target="_blank" aria-label="Instagram">
+              <i class="bi bi-instagram nav-instagram"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -91,7 +103,7 @@
         <button type="button" data-bs-target="#farmaciaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <!-- Imágenes de Unsplash -->
+        <!-- Imágenes de Unsplash (simulando contenido relacionado a Instagram) -->
         <div class="carousel-item active">
           <img src="https://source.unsplash.com/1920x500/?pharmacy" class="d-block w-100" alt="Bienvenidos">
           <div class="carousel-caption d-none d-md-block">
@@ -233,15 +245,72 @@
     </div>
   </section>
 
+  <!-- Sección Instagram: Galería y Reels -->
+  <section id="instagram" class="container my-5">
+    <h2 class="section-title">Síguenos en Instagram</h2>
+    <div class="text-center mb-3">
+       <a href="https://www.instagram.com/farmaciacharallave/" target="_blank" class="btn btn-outline-secondary">
+         <i class="bi bi-instagram" style="font-size: 2rem;"></i> Visita nuestro Instagram
+       </a>
+    </div>
+    <!-- Galería de imágenes (aquí se están usando imágenes de Unsplash para simular contenido) -->
+    <div id="instafeed-container" class="row row-cols-2 row-cols-md-4 g-3">
+       <div class="col">
+         <img src="https://source.unsplash.com/400x400/?pharmacy" class="img-fluid" alt="Publicación de Instagram">
+       </div>
+       <div class="col">
+         <img src="https://source.unsplash.com/400x400/?medicine" class="img-fluid" alt="Publicación de Instagram">
+       </div>
+       <div class="col">
+         <img src="https://source.unsplash.com/400x400/?health" class="img-fluid" alt="Publicación de Instagram">
+       </div>
+       <div class="col">
+         <img src="https://source.unsplash.com/400x400/?wellness" class="img-fluid" alt="Publicación de Instagram">
+       </div>
+    </div>
+    <div class="text-center mt-3">
+       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instagramReelsModal">
+         Ver Reels
+       </button>
+    </div>
+  </section>
+
+  <!-- Modal para mostrar Reels de Instagram -->
+  <div class="modal fade" id="instagramReelsModal" tabindex="-1" aria-labelledby="instagramReelsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="instagramReelsModalLabel">Nuestros Reels en Instagram</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+         </div>
+         <div class="modal-body">
+           <p>A continuación se muestran algunos de nuestros Reels.</p>
+           <!-- Aquí se debe insertar el código embed de cada Reel. Se muestra un ejemplo: -->
+           <div class="ratio ratio-16x9 mb-3">
+              <!-- Ejemplo de embed; reemplaza el URL con el código embebido real obtenido desde Instagram -->
+              <iframe src="https://www.instagram.com/reel/ExampleEmbed/" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
+           </div>
+           <p>Para ver más, visita nuestro perfil de Instagram.</p>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+           <a href="https://www.instagram.com/farmaciacharallave/" target="_blank" class="btn btn-primary">Ir a Instagram</a>
+         </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
       <p>&copy; 2025 Farmacia Charallave C.A. Todos los derechos reservados.</p>
       <p>Dirección: Charallave, Estado Miranda, Venezuela</p>
       <div>
-        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/farmaciacharallave/" target="_blank" class="text-white me-2">
+          <i class="bi bi-instagram"></i>
+        </a>
         <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
       </div>
     </div>
   </footer>
@@ -255,19 +324,19 @@
   <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="chatModalLabel">Soporte en Vivo</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar Chat"></button>
-        </div>
-        <div class="modal-body">
-          <div id="chatArea" class="mb-3" style="height:200px; overflow-y:auto; border:1px solid #ddd; padding:10px;">
-            <p><strong>Sistema:</strong> Hola, ¿en qué podemos ayudarte hoy?</p>
-          </div>
-          <input type="text" id="chatInput" class="form-control" placeholder="Escribe un mensaje..." aria-label="Mensaje de chat">
-        </div>
-        <div class="modal-footer">
-          <button type="button" id="sendChat" class="btn btn-primary">Enviar</button>
-        </div>
+         <div class="modal-header">
+           <h5 class="modal-title" id="chatModalLabel">Soporte en Vivo</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar Chat"></button>
+         </div>
+         <div class="modal-body">
+           <div id="chatArea" class="mb-3" style="height:200px; overflow-y:auto; border:1px solid #ddd; padding:10px;">
+             <p><strong>Sistema:</strong> Hola, ¿en qué podemos ayudarte hoy?</p>
+           </div>
+           <input type="text" id="chatInput" class="form-control" placeholder="Escribe un mensaje..." aria-label="Mensaje de chat">
+         </div>
+         <div class="modal-footer">
+           <button type="button" id="sendChat" class="btn btn-primary">Enviar</button>
+         </div>
       </div>
     </div>
   </div>
@@ -287,7 +356,7 @@
       const chatInput = document.getElementById('chatInput');
       const chatArea = document.getElementById('chatArea');
       const message = chatInput.value.trim();
-      if (message !== '') {
+      if(message !== '') {
         const userMsg = document.createElement('p');
         userMsg.innerHTML = '<strong>Tú:</strong> ' + message;
         chatArea.appendChild(userMsg);
